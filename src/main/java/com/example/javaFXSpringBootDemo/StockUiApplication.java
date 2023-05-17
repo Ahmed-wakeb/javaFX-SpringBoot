@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StockUiApplication {
 
 	public static void main(String[] args) {
-		Application.launch(ChartApplication.class,args);
+		Application.launch(ChartApplication.class,args );
 	}
 
 }
