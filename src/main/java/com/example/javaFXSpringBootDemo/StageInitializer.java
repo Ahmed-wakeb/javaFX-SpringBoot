@@ -17,6 +17,8 @@ import java.io.IOException;
 public class StageInitializer implements ApplicationListener<StageReadyEvent> {
     @Value("classpath:/chart.fxml")
     private Resource chartResource;
+    @Value("classpath:/radar.fxml")
+    private Resource radarResource;
     private String applicationTitle;
     private ApplicationContext applicationContext;
 
@@ -33,7 +35,7 @@ public class StageInitializer implements ApplicationListener<StageReadyEvent> {
             Parent parent = fxmlLoader.load();
 
             Stage stage = event.getStage();
-            stage.setScene(new Scene(parent,800,600));
+            stage.setScene(new Scene(parent));
             stage.setTitle(applicationTitle);
             stage.show();
         } catch (IOException e) {

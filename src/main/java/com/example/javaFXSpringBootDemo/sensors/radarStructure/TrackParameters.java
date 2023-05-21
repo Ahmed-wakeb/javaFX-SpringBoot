@@ -4,18 +4,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class MyRadarModel {
+public class TrackParameters {
     private int id;
-    private Date time;
+    private LocalDate time;
 
     private GeodeticLLAModel geodeticLLAModel;
     private GeodeticSpeedModel geodeticSpeedModel;
-    private char militarySymbol[];
+    private char[] militarySymbol = new char[20];
     int radarId;
     double v1;
     double v2;

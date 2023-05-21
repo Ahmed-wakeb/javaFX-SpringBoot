@@ -1,2 +1,4 @@
-package com.example.javaFXSpringBootDemo.sensors;public class TrackType {
+package com.example.javaFXSpringBootDemo.sensors;
+
+public class TrackType {
 }

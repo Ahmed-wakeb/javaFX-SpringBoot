@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
-public class ChartController {
+public class ChartUI {
     private final ModelService modelService;
     private final SensorController sensorController;
     @FXML

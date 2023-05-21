@@ -1,2 +1,4 @@
-package com.example.javaFXSpringBootDemo.sensors.radarStructure;public class DeviceStatusType {
+package com.example.javaFXSpringBootDemo.sensors.radarStructure;
+
+public class DeviceStatusType {
 }

@@ -4,10 +4,9 @@ import com.example.javaFXSpringBootDemo.sensors.radarStructure.radar10K.Radar10K
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
 
 @Service
-public class RadarService {
+public class RadarsService {
     public TrackParameters convertData(Radar10K radar10K) {
 
         TrackParameters trackParameters = new TrackParameters();
