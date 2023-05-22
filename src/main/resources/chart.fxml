@@ -28,7 +28,7 @@
         <Button onAction="#showData" text="Show Data" />
 
         <Label fx:id="getDataDB" prefHeight="150.0" prefWidth="858.0" textFill="blue" />
-<!--      <Label fx:id="getDataDB1" prefHeight="149.0" prefWidth="742.0" textFill="blue" />-->
+      <Label fx:id="getData" prefHeight="149.0" prefWidth="742.0" textFill="blue" />
     </children>
 
 </VBox>

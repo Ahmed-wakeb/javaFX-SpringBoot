@@ -1,6 +1,6 @@
 package com.example.javaFXSpringBootDemo;
 
-import com.example.javaFXSpringBootDemo.sensors.Sensor;
+import com.example.javaFXSpringBootDemo.sensors.SensorsClassifiedTrackParameters;
 import com.example.javaFXSpringBootDemo.sensors.SensorController;
 import com.example.javaFXSpringBootDemo.testDB.ModelService;
 import javafx.event.ActionEvent;
@@ -10,6 +10,9 @@ import javafx.scene.control.TextField;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+import java.util.List;
+
 @Component
 @RequiredArgsConstructor
 public class ChartUI {
@@ -17,6 +20,7 @@ public class ChartUI {
     private final SensorController sensorController;
     @FXML
     public Label getDataDB;
+    public Label getData;
     @FXML
     private TextField textField1;
     @FXML
@@ -52,7 +56,11 @@ public class ChartUI {
     }
 
     public void showData(ActionEvent actionEvent) {
-        Sensor sensor = sensorController.sendData();
-        getDataDB.setText(sensor.toString());
+        String sensorsClassifiedTrackParameters = sensorController.sendData();
+        getDataDB.setText(sensorsClassifiedTrackParameters);
+        List<SensorsClassifiedTrackParameters> parameters = sensorController.getDataFromDB();
+        getData.setText(parameters.toString());
+
+
     }
 }

@@ -1,5 +1,6 @@
 package com.example.javaFXSpringBootDemo.sensors.radarStructure;
 
+import jakarta.persistence.Embedded;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,8 +13,9 @@ import java.time.LocalDate;
 public class TrackParameters {
     private int id;
     private LocalDate time;
-
+    @Embedded
     private GeodeticLLAModel geodeticLLAModel;
+    @Embedded
     private GeodeticSpeedModel geodeticSpeedModel;
     private char[] militarySymbol = new char[20];
     int radarId;
